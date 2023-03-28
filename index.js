@@ -4,8 +4,8 @@ const main = document.querySelector(".main")
 const startSurveyBtn = document.querySelector(".header__button")
 
 const startSurvey = () => {
-  header.classList.remove("visible")
-  main.classList.add("visible")
+  header.classList.remove("visible-flex")
+  main.classList.add("visible-block")
 }
 
 startSurveyBtn.addEventListener("click", startSurvey)
@@ -21,13 +21,13 @@ const footer = document.querySelector(".footer")
 
 const goToNextQuestion = () => {
   for (let i = 0; i < question.length; i++){
-    if (question[i].classList.contains("visible")) {
+    if (question[i].classList.contains("visible-block")) {
       if (i === question.length-1){
-        main.classList.remove("visible")
-        footer.classList.add("visible")
+        main.classList.remove("visible-block")
+        footer.classList.add("visible-block")
       } else {
-        question[i].classList.remove("visible")
-        question[i+1].classList.add("visible")
+        question[i].classList.remove("visible-block")
+        question[i+1].classList.add("visible-block")
         break;
       }
     }
@@ -44,7 +44,7 @@ ratingBtns.forEach((btn) => {
 
 
 
-// user levels dynamically
+// score and user levels dynamically
 const footerScore = document.querySelector(".footer__score")
 const userLevel = document.querySelector(".footer__userLevel")
 let currentScore = 0

@@ -1,5 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+:root{
+  --font-color: #f2f2f2;
+  --font-family: 'Roboto', sans-serif;
+  --bg-primarly:  #1C77C3;
+  --bg-secondary:  #b9b9b9;
+  --bg-nav: #2a2a2a;
+  --brand-color: #99b67d;
+  --progresBar: #ffffff;
+  --innerProgresBar: #50b850;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  color: var(--font-color);
+  font-family: var(--font-family);
+  overflow: hidden;
+}
+
+
+.nav{
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5rem;
+  background-color: var(--bg-nav);
+}
+
+.nav__h1{
+  color: var(--brand-color);
+}
+
+.nav__progress{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.progress__bar{
+  width: 120px;
+  height: 10px;
+  background-color: var(--progresBar);
+  border-radius: 5px;
+  overflow: hidden;
+}
+.progress__innerBar{
+  width: 100%;
+  height: 100%;
+  background-color: var(--innerProgresBar);
+  transform: translateX(-100%);
+}
+
 .header{
   display: none;
+  width: 100%;
+  min-height: 90vh;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-primarly);
+  transition: 400ms;
+}
+
+.header__content{
+  width: 60%;
+  display: flex;
+  gap: 2.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__button{
+  width: 20%;
+  padding: 1rem;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  opacity: .8;
+}
+
+.header__button:hover{
+  cursor: pointer;
+  opacity: 1;
 }
 
 .main{
@@ -14,6 +104,13 @@
   display: none;
 }
 
-.visible{
-  display: block;
+.visible-block{
+  display: block; 
 }
+
+.visible-flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
