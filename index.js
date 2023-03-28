@@ -2,6 +2,7 @@
 const header = document.querySelector(".header")
 const main = document.querySelector(".main")
 const startSurveyBtn = document.querySelector(".header__button")
+const innerProgressBar = document.querySelector(".progress__innerBar")
 
 const startSurvey = () => {
   header.classList.remove("visible-flex")
@@ -18,6 +19,7 @@ startSurveyBtn.addEventListener("click", startSurvey)
 const ratingBtns = document.querySelectorAll(".main__buttonRating")
 const question = document.querySelectorAll(".main__question")
 const footer = document.querySelector(".footer")
+let amountToMove = 12
 
 const goToNextQuestion = () => {
   for (let i = 0; i < question.length; i++){
@@ -32,6 +34,9 @@ const goToNextQuestion = () => {
       }
     }
   }
+  
+  innerProgressBar.style.marginLeft = amountToMove + "px"
+  amountToMove = amountToMove + 12 
 }
 
 ratingBtns.forEach((btn) => {

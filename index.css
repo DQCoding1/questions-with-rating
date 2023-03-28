@@ -9,7 +9,8 @@
   --bg-nav: #2a2a2a;
   --brand-color: #99b67d;
   --progresBar: #ffffff;
-  --innerProgresBar: #50b850;
+  --progressBarWidth: 120px;
+  --innerProgresBarColor: #50b850;
   --btnRaiting: rgb(185, 185, 185);
 }
 
@@ -48,17 +49,20 @@ body{
 }
 
 .progress__bar{
-  width: 120px;
+  width: var(--progressBarWidth);
   height: 10px;
   background-color: var(--progresBar);
   border-radius: 5px;
   overflow: hidden;
+  position: relative;
 }
+
 .progress__innerBar{
-  width: 100%;
+  position: absolute;
+  left:-100%;
+  width: 120px;
   height: 100%;
-  background-color: var(--innerProgresBar);
-  transform: translateX(-100%);
+  background-color: var(--innerProgresBarColor);
 }
 
 .header{
@@ -214,6 +218,7 @@ body{
   display: none;
 }
 
+ /* VISIBILITY AND PROGRESS BAR */
 .visible-block{
   display: block; 
 }
@@ -223,4 +228,36 @@ body{
   justify-content: center;
   align-items: center;
 }
+
+.moveProgressBar1{
+  transform: translateX(-80px);
+}
+.moveProgressBar2{
+  transform: translateX(-80px );
+}
+.moveProgressBar3{
+  transform: translateX(-80px );
+}
+.moveProgressBar4{
+  transform: translateX(-80px );
+}
+.moveProgressBar5{
+  transform: translateX(-80px );
+}
+.moveProgressBar6{
+  transform: translateX(-80px );
+}
+.moveProgressBar7{
+  transform: translateX(-80px );
+}
+.moveProgressBar8{
+  transform: translateX(-80px );
+}
+.moveProgressBar9{
+  transform: translateX(-80px );
+}
+.moveProgressBar10{
+  transform: translateX(-80px );
+}
+
 
