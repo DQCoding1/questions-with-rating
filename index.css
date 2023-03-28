@@ -190,6 +190,24 @@ body{
 
 .footer{
   display: none;
+  width: 100%;
+  min-height: 90vh;
+  background-color: var(--bg-secondary);
+  color: var(--font-colorDark);
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.footer__thanks{
+  font-size: 2rem;
 }
 
 .main__question{
