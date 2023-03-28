@@ -5,7 +5,7 @@ const startSurveyBtn = document.querySelector(".header__button")
 
 const startSurvey = () => {
   header.classList.remove("visible-flex")
-  main.classList.add("visible-block")
+  main.classList.add("visible-flex")
 }
 
 startSurveyBtn.addEventListener("click", startSurvey)
@@ -23,8 +23,8 @@ const goToNextQuestion = () => {
   for (let i = 0; i < question.length; i++){
     if (question[i].classList.contains("visible-block")) {
       if (i === question.length-1){
-        main.classList.remove("visible-block")
-        footer.classList.add("visible-block")
+        main.classList.remove("visible-flex")
+        footer.classList.add("visible-flex")
       } else {
         question[i].classList.remove("visible-block")
         question[i+1].classList.add("visible-block")
