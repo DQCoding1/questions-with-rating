@@ -10,6 +10,10 @@
   display: none;
 }
 
+.main__question{
+  display: none;
+}
+
 .visible{
   display: block;
 }
