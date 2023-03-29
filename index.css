@@ -68,7 +68,7 @@ body{
 .header{
   display: none;
   width: 100%;
-  min-height: 90vh;
+  height: 90vh;
   justify-content: center;
   align-items: center;
   background-color: var(--bg-primarly);
@@ -91,11 +91,35 @@ body{
   outline: none;
   border: none;
   opacity: .8;
+  position: relative;
+  overflow: hidden;
+  font-size: 1.1rem;
 }
 
 .header__button:hover{
   cursor: pointer;
   opacity: 1;
+  color: var(--font-colorLight);
+  z-index: 100;
+  transition: 500ms;
+}
+
+.header__button::before{
+  position: absolute;
+  content: "";
+  background-color: var(--innerProgresBarColor);
+  top: 50%;
+  left: 50%;
+  width: 1px;
+  height: 1px;
+  border-radius: 50%;
+  transition: 500ms;
+  z-index: -100;
+
+}
+
+.header__button:hover::before{
+  transform: scale(180);
 }
 
 /* MAIN  */
@@ -104,7 +128,7 @@ body{
   background-color: var(--bg-secondary);
   color: var(--font-colorDark);
   width: 100%;
-  min-height: 90vh;
+  height: 90vh;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -195,7 +219,7 @@ body{
 .footer{
   display: none;
   width: 100%;
-  min-height: 90vh;
+  height: 90vh;
   background-color: var(--bg-secondary);
   color: var(--font-colorDark);
   justify-content: center;
@@ -218,7 +242,10 @@ body{
   display: none;
 }
 
- /* VISIBILITY AND PROGRESS BAR */
+
+
+
+ /* VISIBILITY */
 .visible-block{
   display: block; 
 }
@@ -229,35 +256,51 @@ body{
   align-items: center;
 }
 
-.moveProgressBar1{
-  transform: translateX(-80px);
-}
-.moveProgressBar2{
-  transform: translateX(-80px );
-}
-.moveProgressBar3{
-  transform: translateX(-80px );
-}
-.moveProgressBar4{
-  transform: translateX(-80px );
-}
-.moveProgressBar5{
-  transform: translateX(-80px );
-}
-.moveProgressBar6{
-  transform: translateX(-80px );
-}
-.moveProgressBar7{
-  transform: translateX(-80px );
-}
-.moveProgressBar8{
-  transform: translateX(-80px );
-}
-.moveProgressBar9{
-  transform: translateX(-80px );
-}
-.moveProgressBar10{
-  transform: translateX(-80px );
-}
 
 
+
+@media (max-width: 1100px){
+  .header__content{
+    width: 80%;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 800px){
+  .header{
+    padding: 1.5rem;
+  }
+
+  .header__content{
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .header__button{
+    width: 50%;
+    padding: .8rem;
+  }
+
+  .main__rating{
+    width: 80%;
+  }
+}
+
+@media (max-width: 600px){
+  .header{
+    font-size: .8rem;
+  }
+
+  .header__button{
+    width: 80%;
+    padding: .7rem;
+  }
+
+  .nav{
+    padding: 1rem;
+  }
+
+  .nav__progress{
+    gap: 1rem;
+  }
+}
